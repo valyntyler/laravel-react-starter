@@ -7,7 +7,12 @@ This project uses the following libraries:
 - `react-hook-form` for... well, you can probably guess that for yourself
 
 ## Usage
-Start the Vite "build-watch-serve" pipeline with `npm run watch`. For production, use `npm run build`, and either run `php artisan serve` or serve your app with your preffered method with your document root set to `public/index.php`.
+- Copy the `.env.example` file to a new `.env` file. That's your project's runtime environment.
+- Run `php artisan key:generate` to populate your `.env` with a unique app key.
+- Create a MySQL user and update your `DB_DATABASE`, `DB_USERNAME` and `DB_PASSWORD` variables accordingly.
+- Run `php artisan make:migration` and `php artisan migrate` to sync your database to the project.
+
+Start the Vite "build-watch-serve" pipeline with `npm run watch` and run your PHP server with `php artisan serve`. For production, use `npm run build`, and either run `php artisan serve` or serve your app with your preffered method with your document root set to `public/index.php`.
 
 ## Tips
 - Don't use hard-coded URLs for routes, you monster.
