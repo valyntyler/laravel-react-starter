@@ -7,7 +7,7 @@ This project uses the following libraries:
 - `react-hook-form` for... well, you can probably guess that for yourself
 
 ## Usage
-Start the Vite "build-watch-serve" pipeline with `npm run watch`. For production, use `npm run build`, which serves the `build/` directory through `public/`.
+Start the Vite "build-watch-serve" pipeline with `npm run watch`. For production, use `npm run build`, and either run `php artisan serve` or serve your app with your preffered method with your document root set to `public/index.php`.
 
 ## Tips
 - Don't use hard-coded URLs for routes, you monster.
