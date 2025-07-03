@@ -1,0 +1,18 @@
+layout {
+    pane size=1 borderless=true {
+        plugin location="zellij:compact-bar"
+    }
+    pane split_direction="vertical" {
+        pane size="60%"
+        pane split_direction="horizontal" {
+            pane command="npm" {
+                args "run" "watch"
+                start_suspended false
+            }
+            pane command="php" {
+                args "artisan" "serve"
+                start_suspended false
+            }
+        }
+    }
+}
