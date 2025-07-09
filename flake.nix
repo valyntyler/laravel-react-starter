@@ -30,10 +30,15 @@
           DB_USERNAME = "root";
           DB_PASSWORD = "mypassword";
         };
-        packages.default = pkgs.writeShellScriptBin "start" ''
-          npm run build
-          php artisan serve
-        '';
+
+        packages = rec {
+          build = pkgs.writeShellScriptBin "build" "npm run build";
+          serve = pkgs.writeShellScriptBin "serve" "php artisan serve";
+          default = pkgs.writeShellScriptBin "default" ''
+            ${build}/bin/build
+            ${serve}/bin/serve
+          '';
+        };
       }
     );
 }
