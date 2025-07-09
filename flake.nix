@@ -17,10 +17,11 @@
         devShells.default = pkgs.mkShell {
           # Dev dependencies
           buildInputs = with pkgs; [
-            docker
             laravel
             nodejs
             php
+            podman
+            podman-compose
             phpPackages.composer
             typescript
           ];
