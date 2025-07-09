@@ -23,6 +23,12 @@
             phpPackages.composer
             typescript
           ];
+          DB_CONNECTION = "mysql";
+          DB_HOST = "127.0.0.1";
+          DB_PORT = "3306";
+          DB_DATABASE = "mydatabase";
+          DB_USERNAME = "root";
+          DB_PASSWORD = "mypassword";
         };
         packages.default = pkgs.writeShellScriptBin "start" ''
           npm run build
